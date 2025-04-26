@@ -1,7 +1,7 @@
 import cp from 'node:child_process'
 import path from 'node:path'
 import process from 'node:process'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
