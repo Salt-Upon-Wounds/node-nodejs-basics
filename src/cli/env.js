@@ -1,5 +1,7 @@
-const parseEnv = () => {
-    // Write your code here 
-};
+import process from 'node:process'
 
-parseEnv();
+const parseEnv = () => {
+  console.log(Object.keys(process.env).filter(el => /^RSS_/.test(el)).join('; '))
+}
+
+parseEnv()

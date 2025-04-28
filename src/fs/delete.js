@@ -1,5 +1,14 @@
-const remove = async () => {
-    // Write your code here 
-};
+import fs from 'node:fs/promises'
+import getDirname from './dirname.js'
+import path from 'node:path'
 
-await remove();
+const remove = async () => {
+  const filePath = path.join(getDirname(), 'files', 'fileToRemove.txt')
+  try {
+    await fs.unlink(filePath)
+  } catch (e) {
+    throw Error('FS operation failed')
+  }
+}
+
+await remove()
